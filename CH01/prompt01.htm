@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show prompt 01</h2>
+<hr>
+
+<script language="JavaScript">
+function link2course()
+{
+	course = prompt("Please input course no:(cs001, cs002, cs003 or cs004)");
+	if ((course == "cs001") || (course == "cs002") || (course == "cs003") || (course == "cs004") )
+	{
+		alert("Your choice is: " + course);
+		location.href="http://ocw.mit.edu/courses/index.htm";
+	}
+}
+</script>
+
+<A href="javascript:link2course()">MIT course</A>
+
+<hr>
+
+</body>
+</html>

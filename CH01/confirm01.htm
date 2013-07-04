@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show confirm 01</h2>
+<hr>
+
+<script language="javascript">
+function link2google()
+{
+	answer = confirm("Do you want to link to Google?");
+	if (answer)
+	{
+		location.href="http://www.google.com";
+	}
+}
+</script>
+
+<!-- method 1: function -->
+<A href="javascript:link2google()">Google</A> <br>
+
+<!-- method 2: link include code -->
+<A href="javascript: if (confirm('Do you want to link to Ubuntu?')) location.href='http://www.ubuntu.com'">Ubuntu</A> <br>
+
+<!-- method 3: use onClick -->
+<A href="http://www.apache.org" onClick="return(confirm('Do you want to link to Apache?'))">Apache</A>
+
+<hr>
+
+</body>
+</html>
