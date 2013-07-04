@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show switch 01</h2>
+<hr>
+
+<script language="JavaScript">
+today = new Date();
+hour = today.getHours();
+minute = today.getMinutes();
+second = today.getSeconds();
+prepand = (hour >= 12) ? hour - 12 : hour;
+document.write("It is: " + prepand + "h:" + minute + "m:" + second + "s, now");
+</script>
+
+<hr>
+
+</body>
+</html>
