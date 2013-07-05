@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show null 01</h2>
+<hr>
+
+<pre>
+<script language="JavaScript">
+x = null;
+document.writeln("x = null");
+document.writeln("typeof(x) is:" + typeof(x));
+document.write("(x)?document.write(\"True!\"):document.write(\"False!\") result is: ");
+(x)?document.writeln("True!"):document.writeln("False!");
+document.write("x == null result is: ");
+(x == null)?document.writeln("True!"):document.writeln("False!");
+</script>
+</pre>
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show undefined 01</h2>
+<hr>
+
+<script language="JavaScript">
+if (typeof(notDeclared) == "undefined")
+{
+	document.write("The variable \"notDeclared\" is not declared<br>");
+}
+document.write("typeof(notDeclared)=" + typeof(notDeclared) + "<br>");
+//
+var declared;
+if (declared == undefined)
+{
+	document.write("The variable \"declared\" is declared but not initialized<br>");
+}
+document.write("declared=" + declared + "<br>");
+document.write("typeof(declared)=" + typeof(declared) + "<br>");
+</script>
+
+<hr>
+
+</body>
+</html>

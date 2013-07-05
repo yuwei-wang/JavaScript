@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show tyoeof 01</h2>
+<hr>
+
+<script language="JavaScript">
+x = "This is a string";
+document.write("String:" + typeof(x) + "<br>");
+x = 100;
+document.write("Number:" + typeof(x) + "<br>");
+x = 10 == 10;
+document.write("Boolean:" + typeof(x) + "<br>");
+function square(n)
+{
+	return (n * n);
+}
+document.write("Function:" + typeof(square) + "<br>");
+x = new Date();
+document.write("Date:" + typeof(x) + "<br>");
+x = ["Mon","Tue","Wen"];
+document.write("Array:" + typeof(x) + "<br>");
+x = {"Mon":"Game","Thu":"Sports","Wed":"Karaoke"}
+document.write("Dictionary:" + typeof(x) + "<br>");
+student = new Object();
+student.name = "Timmy";
+student.age = 25;
+student.phone = "575-1114";
+document.write("Custom object:" + typeof(student) + "<br>");
+</script>
+
+<hr>
+
+</body>
+</html>
