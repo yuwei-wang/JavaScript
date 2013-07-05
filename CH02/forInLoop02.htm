@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show for-in loop 02</h2>
+<hr>
+
+<script language="JavaScript">
+student = new Object();
+student.name = "Timmy";
+student.age = "25";
+student.phone = "575-1114";
+
+for (prop in student)
+{
+	document.write("<br>student." + prop + " = " + student[prop]);
+}
+
+</script>
+
+<hr>
+
+</body>
+</html>
