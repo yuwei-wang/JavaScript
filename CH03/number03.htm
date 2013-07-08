@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show number 03</h2>
+<hr>
+
+<table>
+<tr><th>Decimal<th>Binary<th>Octal<th>Hexadecimal
+<script language="JavaScript">
+for (i = 0; i < 16; i++)
+{
+	document.write("<tr>");
+	document.write("<td>" + i.toString());
+	document.write("<td>" + i.toString(2));
+	document.write("<td>" + i.toString(8));
+	document.write("<td>" + i.toString(16));
+}
+</script>
+</table>
+
+<hr>
+
+</body>
+</html>

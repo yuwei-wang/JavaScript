@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show toString 01</h2>
+<hr>
+
+<script language="JavaScript">
+x = "This is a string";
+document.write("String: " + x.toString() + "<br>");
+x = new Date();
+document.write("Date: " + x.toString() + "<br>");
+x = ["Mon", "Tue", "Wed"];
+document.write("Array: " + x.toString() + "<br>");
+function square(n)
+{
+	return (n * n);
+}
+document.write("Function: " + square.toString() + "<br>");
+student = new Object();
+student.name = "Timmy";
+student.age = "25";
+student.phone = "575-1114";
+document.write("Custom object: " + student.toString() + "<br>");
+</script>
+
+<hr>
+
+</body>
+</html>
