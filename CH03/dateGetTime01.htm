@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dateGetTime 01</h2>
+<hr>
+
+<script language="JavaScript">
+function go(form)
+{
+	switch(form.myButton.value)
+	{
+		case "start":
+			date1 = new Date();
+			form.timeDisplay.value = "Counting...";
+			form.myButton.value = "stop";
+			break;
+		case "stop":
+			date2 = new Date();
+			timeDiff = (date2.getTime() - date1.getTime()) / 1000;
+			form.timeDisplay.value = timeDiff;
+			form.myButton.value = "reset";
+			break;
+		case "reset":
+			form.timeDisplay.value = "00:00:00";
+			form.myButton.value = "start";
+			break;
+		default:
+			alert("Error!");
+			break;
+	}
+}
+</script>
+
+<center>
+<form>
+<input type="button" name="myButton" value="start" width=10 onClick="go(this.form)">
+<p>
+Time exceed: <input type=text name="timeDisplay" value="00:00:00"> Second
+</form>
+</center>
+
+<hr>
+
+</body>
+</html>

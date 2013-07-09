@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show date 02</h2>
+<hr>
+
+<script language="JavaScript">
+today = new Date();
+method = ["getDate", "getDay", "getFullYear", "getHours", "getMilliseconds", "getMinutes", "getMonth", "getSeconds", "getTime", "getTimezoneOffset", "getUTCDate", "getUTCDay", "getUTCFullYear", "getUTCHours", "getUTCMilliseconds", "getUTCMinutes", "getUTCMonth", "getUTCSeconds", "getVarDate", "toGMTString", "toLocaleString", "toUTCString", "toString", "valueOf"]
+
+for (i = 0; i < method.length; i++)
+{
+	document.write("<br> today." + method[i] + "() = " + eval("today." + method[i] + "();"));
+}
+</script>
+
+<hr>
+
+</body>
+</html>
