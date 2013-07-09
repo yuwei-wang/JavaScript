@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show imageProp 01</h2>
+<hr>
+
+
+
+<script language="JavaScript">
+myImage = new Image();
+myImage.src = "http://www.blogcdn.com/cn.engadget.com/media/2013/07/xsamsung-gs4-active-uk-2013-07-09-01.jpg.pagespeed.ic.5sZ2PLTC-V.jpg";
+for (prop in myImage)
+{
+	document.write("<br>myImage." + prop + " = " + myImage[prop]);
+}
+</script>
+
+<hr>
+
+</body>
+</html>
