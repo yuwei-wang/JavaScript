@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show randomMusic</h2>
+<hr>
+
+<script language="JavaScript">
+midiFile = new Array();
+songName = new Array();
+singerName = new Array();
+
+i = 0;
+midiFile[i] = "music/" + i + ".mid";
+songName[i] = "MISS ATOMIC BOMB";
+singerName[i] = "THE_KILLERS";
+i++;
+midiFile[i] = "music/" + i + ".mid";
+songName[i] = "ALIVE";
+singerName[i] = "EMPIRE_OF_THE_SUN";
+i++;
+midiFile[i] = "music/" + i + ".mid";
+songName[i] = "STAND";
+singerName[i] = "R.E.M.";
+i++;
+midiFile[i] = "music/" + i + ".mid";
+songName[i] = "MY PROMISE";
+singerName[i] = "EARTH_WIND_AND_FIRE";
+i++;
+midiFile[i] = "music/" + i + ".mid";
+songName[i] = "ASHTON PARK (INSTRUMENTAL)";
+singerName[i] = "JAMES GANG";
+
+index = Math.floor(Math.random() * midiFile.length);
+pickedMidi = midiFile[index];
+pickedSongName = songName[index];
+pickedSingerName = singerName[index];
+</script>
+
+<p align=center>
+<script>
+document.write("The song playing now: <font color=green>" + pickedSingerName + "'s </font>");
+document.write("<font color=red>" + pickedSongName + "</font>");
+</script>
+
+<p>
+All songs:
+<blockquote>
+<script>
+for (var i = 0; i < midiFile.length; i++)
+{
+	document.write("<font color=green>" + singerName[i] + "</font>:");
+	document.write("<font color=red>" + songName[i] + "</font>");
+	document.write(" (<a href=" + midiFile[i] + ">" + midiFile[i] + "</a>)<br>");
+}
+</script>
+</blockquote>
+
+<hr>
+
+</body>
+</html>

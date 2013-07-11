@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show randomTxt</h2>
+<hr>
+
+<script language="JavaScript">
+text = new Array();
+i = 0;
+text[i++] = "If you don't set aside time for exercise,<br>you'll set aside time for illness.";
+text[i++] = "Yesterday is history, Tomorrow is mystery, and Today is a gift. That is why we call it present.";
+text[i++] = "Draft beer, not people.";
+text[i++] = "Of all the things I lost, I miss my mind most";
+text[i++] = "Chhoose what you love...<br>Love what you choose.";
+text[i++] = "Rules are made to be broken.";
+text[i++] = "Waste bandwidth; not trees!";
+text[i++] = "Work like you don't need the money.<br>Love like you've never been hurt.<br>Dance like nobody's watching.";
+
+index = Math.floor(Math.random() * text.length);
+document.write("<center><table border=2 cellpadding=20 bgcolor=white>");
+document.write("<tr><td><b><font size=+2 face=\"Helvetical,Arial\" color=#408080>");
+document.write(text[index]);
+document.write("</font></b></td></tr></table></center>");
+</script>
+
+<hr>
+
+</body>
+</html>
