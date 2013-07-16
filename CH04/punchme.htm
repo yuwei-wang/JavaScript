@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Refresh" content=3 CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show punchMe</h2>
+<hr>
+
+<script language="JavaScript">
+text1 = new Array();
+i = 0;
+text1[i++] = "Hey you geek, ";
+text1[i++] = "Hey buddy, ";
+text1[i++] = "See if you dare to ";
+text1[i++] = "To reboot the computer, ";
+text1[i++] = "To save the word";
+text1[i++] = "To get the highest score in the class, ";
+
+text2 = new Array();
+i = 0;
+text2[i++] = "punch me!";
+text2[i++] = "press me!";
+text2[i++] = "push me!";
+text2[i++] = "hit me with your best shot!";
+
+document.write("<h3 align=center>");
+document.write("<font face='Helvetical,Arial' color='#408080'><I>");
+document.write(text1[Math.floor((Math.random() * text1.length))] + text2[Math.floor((Math.random() * text2.length))]);
+document.write("</I></font>");
+document.write("</h3>");
+
+</script>
+
+<center>
+<img src="1.jpg" onMouseDown="this.src='2.jpg'" onMouseUp="this.src='1.jpg'">
+</center>
+
+<hr>
+
+</body>
+</html>

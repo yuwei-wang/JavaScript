@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show arraySort 01</h2>
+<hr>
+
+<script src=listArray.js></script>
+<script language="JavaScript">
+myArray = ["First", "3.1415926", "Third", 4];
+document.writeln("<p>Original array:<br>");
+listArray(myArray, "myArray");
+document.writeln("<p>Sorted array:<br>");
+listArray(myArray.sort(), "myArray");
+document.writeln("<p>Reversed array:<br>");
+listArray(myArray.reverse(), "myArray");
+</script>
+
+<hr>
+
+</body>
+</html>

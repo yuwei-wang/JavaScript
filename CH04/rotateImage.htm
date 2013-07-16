@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show randomImage</h2>
+<hr>
+
+<h3 align=center>
+Click the image to show the next picture!
+</h3>
+
+<script language="JavaScript">
+currentIndex = 0;
+imageArray = new Array();
+photoNum = 9;
+
+for (i =1; i <= photoNum; i++)
+{
+	imageArray[i] = new Image();
+	imageArray[i].src = i + ".jpg";
+}
+
+function nextImageUrl()
+{
+	currentIndex++;
+	currentIndex = currentIndex % photoNum;
+	return(imageArray[currentIndex].src);
+}
+
+</script>
+
+<center>
+<img src="9.jpg" onMouseUp="this.src=nextImageUrl()">
+</center>
+
+<hr>
+
+</body>
+</html>
