@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show arraySort 02</h2>
+<hr>
+
+<script language="JavaScript">
+function comparisonFunction(a, b)
+{
+	return(a - b);
+}
+
+myArray = ["80", "9", "700", "40", "1", "5"];
+
+document.write("Original array: " + myArray + "<br>");
+document.write("Sort by string: " + myArray.sort() + "<br>");
+document.write("Sort by value: " + myArray.sort(comparisonFunction) + "<br>");
+
+</script>
+
+<hr>
+
+</body>
+</html>
