@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show arrayPop 01</h2>
+<hr>
+
+<script src=listArray.js></script>
+<script language="JavaScript">
+myPet = ["Rat", "Cow", "Tiger", "Rabbit"];
+document.writeln("myPet = " + myPet + "<br>");
+//test pop()
+cmd = "popped = myPet.pop()";
+eval(cmd);
+document.writeln("<p>After ==> " + cmd + " :<br>");
+document.writeln("myPet = " + myPet + "<br>");
+document.writeln("popped = " + popped + "<br>");
+//test push()
+cmd = 'elementCount = myPet.push("Dragon", "Snake")';
+eval(cmd);
+document.writeln("<p>After ==> " + cmd + " :<br>");
+document.writeln("myPet = " + myPet + "<br>");
+document.writeln("elementCount = " + elementCount + "<br>");
+//test shift()
+cmd = "shifted = myPet.shift()";
+eval(cmd);
+document.writeln("<p>After ==> " + cmd + " :<br>");
+document.writeln("myPet = " + myPet + "<br>");
+//document.writeln("shifted = " + shifted + "<br>");
+//test unshift()
+cmd = 'myPet.unshift("Dog", "Pig")';
+eval(cmd);
+document.writeln("<p>After ==> " + cmd + " :<br>");
+document.writeln("myPet = " + myPet + "<br>");
+</script>
+
+<hr>
+
+</body>
+</html>

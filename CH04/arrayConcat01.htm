@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show arrayConcat 01</h2>
+<hr>
+
+<script src=listArray.js></script>
+<script language="JavaScript">
+str1 = "SUSE、openSUSE";
+str2 = "Ubuntu、LinuxMint、Fedora";
+array1 = str1.split("、");
+array2 = str2.split("、");
+document.writeln("Array 1:<br>");
+listArray(array1, "array1");
+document.writeln("<br>");
+document.writeln("Array 2:<br>");
+listArray(array2, "array2");
+document.writeln("<br>");
+document.writeln("array1 + array2:<br>");
+array3 = array1.concat(array2);
+listArray(array3, "array3");
+</script>
+
+<hr>
+
+</body>
+</html>
