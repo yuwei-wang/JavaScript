@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show prototype 01</h2>
+<hr>
+
+<script src=listArray.js></script>
+
+<script language="JavaScript">
+function arrayMax()
+{
+	var i, max = this[0];
+	for (i = 1; i < this.length; i++)
+	{
+		if(max < this[i])
+		{
+			max = this[i];
+		}
+	}
+	return(max);
+}
+
+Array.prototype.max = arrayMax;
+myArray = new Array(4, 9, 2, 1);
+document.write("myArray: <br>");
+listArray(myArray, "myArray");
+document.write("The max item in myArray is: " + myArray.max());
+</script>
+
+<hr>
+
+</body>
+</html>
