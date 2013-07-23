@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dict 02</h2>
+<hr>
+
+<script src=listDict.js></script>
+<script language="JavaScript">
+countryOf = new ActiveXObject("Scripting.Dictionary");
+countryOf.Add("Taipei", "Taiwan");
+countryOf.Add("San Francisco", "USA");
+countryOf.Add("Tokyo", "Japan");
+countryOf.Add("Seoul", "Korea");
+countryOf.Remove("Tokyo");
+countryOf.Key("Taipei") = "Hsinchu";
+countryOf.Item("Tokyo") = "Nippon";
+listDict(countryOf, "countryOf");
+
+</script>
+
+<hr>
+
+</body>
+</html>

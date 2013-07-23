@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dict 03</h2>
+<hr>
+
+
+<script language="JavaScript">
+capitalOf = new ActiveXObject("Scripting.Dictionary");
+capitalOf.Add("Taiwan","Taipei");
+capitalOf.Add("USA","Washington");
+capitalOf.Add("Korea","Seoul");
+
+document.writeln("<p>Using Keys() to get keys: <br>");
+allKeys = (new VBArray(capitalOf.Keys())).toArray();
+for (i = 0; i < capitalOf.Count; i++)
+{
+	document.writeln(allKeys[i] + "<br>");
+}
+
+document.writeln("<p>Using Items() to get items: <br>");
+allItems = (new VBArray(capitalOf.Items())).toArray();
+for (i = 0; i < capitalOf.Count; i++)
+{
+	document.writeln(allItems[i] + "<br>");
+}
+</script>
+
+<hr>
+
+</body>
+</html>

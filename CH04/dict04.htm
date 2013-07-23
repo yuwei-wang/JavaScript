@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dict 04</h2>
+<hr>
+
+<script src=listDict.js></script>
+<script language="JavaScript">
+capitalOf = new ActiveXObject("Scripting.Dictionary");
+capitalOf.Add("Taiwan", "Taipei");
+capitalOf.Add("USA", "Washington");
+capitalOf.Add("Korea", "Seoul");
+listDict(capitalOf, "capitalOf");
+
+key = "Taiwan";
+if (capitalOf.Exists(key))
+{
+	document.writeln("\"" + key + "\" is a key of \"capitalOf\".<br>");
+}
+else {
+	document.writeln("\"" + key + "\" is NOT a key of \"capitalOf\".<br>");
+}
+
+key = "Japan";
+if (capitalOf.Exists(key))
+{
+	document.writeln("\"" + key + "\" is a key of \"capitalOf\".<br>");
+} else {
+	document.writeln("\"" + key + "\" is NOT a key of \"capitalOf\".<br>");
+}
+
+capitalOf.RemoveAll();
+listDict(capitalOf, "capitalOf");
+
+</script>
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dict 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+capitalOf = new ActiveXObject("Scripting.Dictionary");
+capitalOf.Add("Taiwan", "Taipei");
+capitalOf.Add("USA", "Washington");
+capitalOf.Add("Korea", "Seoul");
+document.writeln("capitalOf(\"Taiwan\") = " + capitalOf("Taiwan") + "<br>");
+document.writeln("capitalOf(\"USA\") = " + capitalOf("USA") + "<br>");
+document.writeln("capitalOf(\"Korea\") = " + capitalOf("Korea") + "<br>")
+</script>
+
+<hr>
+
+</body>
+</html>
