@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show in 01</h2>
+<hr>
+
+<script src="listProp.js"></script>
+<script language="JavaScript">
+student = new Object();
+student.name = "Timmy";
+student.age = "25";
+student.phone = "575-1114";
+listProp(student, "student");
+
+field = "age";
+if (field in student)
+{
+	document.writeln(field + " is a field of student<br>");
+}
+</script>
+
+<hr>
+
+</body>
+</html>

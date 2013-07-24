@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show object 03</h2>
+<hr>
+
+<script language="JavaScript">
+function student(inputName, inputStudentID, inputAge)
+{
+	this.name = inputName;
+	this.studentID = inputStudentID;
+	this.age = inputAge;
+	this.display = displayStudent;
+}
+
+function displayStudent()
+{
+	var outStr = "Name = " + this.name + "\n";
+	outStr = outStr + "studentID = " + this.studentID + "\n";
+	outStr = outStr + "age = " + this.age;
+	alert(outStr);
+}
+
+student1 = new student("Alex", "695326", "23");
+student2 = new student("Joey", "998735", "20");
+student3 = new student("Kelvin", "978732", "22");
+
+</script>
+
+Press the button to show the student's information:
+<form>
+<input type=button value=student1 onClick="javascript:student1.display()">
+<input type=button value=student2 onClick="javascript:student2.display()">
+<input type=button value=student3 onClick="javascript:student3.display()">
+</form>
+
+<hr>
+
+</body>
+</html>

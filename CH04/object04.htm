@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show object 04</h2>
+<hr>
+
+<script language="JavaScript">
+function course(inputName, inputCourseID, inputCredit)
+{
+	this.name = inputName;
+	this.courseID = inputCourseID;
+	this.credit = inputCredit;
+	this.display = displayCourse;
+}
+
+function displayCourse()
+{
+	var outStr = "Name = " + this.name + "\n";
+	outStr = outStr + "Course = " + this.courseID + "\n";
+	outStr = outStr + "Credit = " + this.credit + "\n";
+	alert(outStr);
+}
+
+function student(inputName, inputStudentID, inputAge, inputCourse)
+{
+	this.name = inputName;
+	this.studentID = inputStudentID;
+	this.age = inputAge;
+	this.course = inputCourse;
+	this.display = displayStudent;
+}
+
+function displayStudent()
+{
+	var outStr = "Name = " + this.name + "\n";
+	outStr = outStr + "Student ID = " + this.studentID + "\n";
+	outStr = outStr + "Age = " + this.age + "\n";
+	outStr = outStr + "Course = " + this.course.name + "\n";
+	alert(outStr);
+}
+
+course1 = new course("Web Programming Design", "CS3431", "3");
+course2 = new course("Audio process", "CS5770", "3");
+course3 = new course("Math", "CS3111", "2");
+student1 = new student("Alex", 695326, 23, course1);
+student2 = new student("Joey", 998735, 20, course2);
+student3 = new student("Kelvin", 978732, 22, course1);
+
+</script>
+
+Press the buttons to show the information of students or courses:
+
+<form>
+<input type=button value=course1 onClick="javascript:course1.display()">
+<input type=button value=course2 onClick="javascript:course2.display()">
+<input type=button value=course3 onClick="javascript:course3.display()">
+<input type=button value=student1 onClick="javascript:student1.display()">
+<input type=button value=student2 onClick="javascript:student2.display()">
+<input type=button value=student3 onClick="javascript:student3.display()">
+</form>
+
+
+<hr>
+
+</body>
+</html>
