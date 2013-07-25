@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show funcFact 01</h2>
+<hr>
+
+<script language="JavaScript">
+function fact(n)
+{
+	if (n == 0)
+	{
+		return(1);
+	}
+	return (n * fact(n - 1));
+}
+
+for (i = 10; i < 19; i++)
+{
+	document.write(i + "! = " + fact(i) + "<br>");
+}
+</script>
+
+
+<hr>
+
+</body>
+</html>
