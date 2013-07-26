@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show setTimeout 01</h2>
+<hr>
+
+<script language="JavaScript">
+function clickCallBack()
+{
+	document.theForm.theButton.value = "The grenade bang after 3 seconds...";
+	setTimeout("alert('Bang!!!'); document.theForm.theButton.value='Throw the grenade'", 3 * 1000);
+}
+</script>
+
+<center>
+<form name="theForm">
+<input type="button" name="theButton" value="Throw the grenade" onClick="clickCallBack()">
+</form>
+</center>
+
+<hr>
+
+</body>
+</html>
