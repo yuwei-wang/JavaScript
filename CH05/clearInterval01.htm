@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show clearInterval 01</h2>
+<hr>
+
+<script language="JavaScript">
+function showTime()
+{
+	date = new Date();
+	document.getElementById("theText").value = date.toLocaleString();
+}
+
+clock = setInterval("showTime()", 1000);
+
+</script>
+
+<center>
+<form>
+Current time: <input type="text" id=theText size=30>
+<input type=button name=controlButton value="Stop the clock" onClick="clearInterval(clock)">
+</form>
+</center>
+
+
+<hr>
+
+</body>
+</html>

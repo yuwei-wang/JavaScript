@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show setTimeout 02</h2>
+<hr>
+
+<script language="JavaScript">
+timeStep = 0.1;
+accumulated = 0;
+
+function showTime()
+{
+	document.getElementById("theText").value = accumulated;
+	accumulated += timeStep;
+	timer = setTimeout("showTime();", timeStep * 1000);
+}
+
+function clickCallBack()
+{
+	switch(document.getElementById("theButton").value)
+	{
+		case "Start counting":
+			document.getElementById("theButton").value = "Stop counting";
+			accumulated = 0;
+			showTime();
+			break;
+		case "Stop counting":
+			document.getElementById("theButton").value = "Start counting";
+			clearTimeout(timer);
+			break;
+		default:
+			alert("Error!");
+			break;
+	}
+}
+
+
+</script>
+
+
+<center>
+<form>
+<input type="button" id=theButton value="Start counting" onClick="clickCallBack()">
+<input type="text" id=theText>
+</form>
+</center>
+
+
+<hr>
+
+</body>
+</html>

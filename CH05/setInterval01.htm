@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show setInterval 01</h2>
+<hr>
+
+<script language="JavaScript">
+function showTime()
+{
+	date = new Date();
+	document.getElementById("theText").value = date.toLocaleString();
+}
+
+setInterval("showTime()", 1000);
+
+</script>
+
+<center>
+<form>
+Current time: <input type="text" id=theText size=30> 
+</form>
+</center>
+
+
+<hr>
+
+</body>
+</html>
