@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show bgSound 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function changeBackground()
+{
+	var imgURL = ["bg1.gif", "bg2.gif", "bg3.gif", "bg4.jpg", "bg5.gif"];
+	document.body.background = "image/" + imgURL[Math.floor(Math.random() * imgURL.length)];
+}
+
+function changeMusic()
+{
+	var soundURL = ["01.mid", "02.mid", "03.mid", "04.mid", "05.mid"];
+	myMusic.src = "music/" +soundURL[Math.floor(Math.random() * soundURL.length)];
+}
+</script>
+
+<bgsound id="myMusic" src="" loop="infinite">
+
+<form>
+<center>
+<input type="button" value="Change the background picture" onClick="changeBackground()">
+<input type="button" value="Change the background music" onClick="changeMusic()">
+</center>
+</form>
+
+<hr>
+
+</body>
+</html>

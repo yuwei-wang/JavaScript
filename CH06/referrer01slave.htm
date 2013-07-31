@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show referrerslave 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+alert(document.referrer.indexOf("referrer01master.htm"));
+if (document.referrer.indexOf("referrer01master.htm") == -1)
+{
+	//it must linked from the hyper link from referrer01master.htm
+	alert("Link failed !\n document.referrer01 = " + document.referrer);
+	alert("Please link from the master page");
+	document.location = "referrer01master.htm";
+} else {
+	alert("Link successed ! \n document.referrer = " + document.referrer);
+}
+</script>
+
+The protected content start from here.
+
+<hr>
+
+</body>
+</html>
