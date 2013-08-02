@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show winOpen 02</h2>
+<hr>
+
+
+<script language="JavaScript">
+function openWindow(form)
+{
+	var winFmt = "";
+	winFmt += "width="+form.width.value+",";
+	winFmt += "height=" + form.height.value + ",";
+	winFmt += "left=" + form.left.value + ",";
+	winFmt += "top=" + form.top.value + ",";
+	winFmt += "titlebar=" + (form.titlebar.status?1:0) + ",";
+	winFmt += "menubar=" + (form.menubar.status?1:0) + ",";
+	winFmt += "toolbar=" + (form.toolbar.status?1:0) + ",";
+	winFmt += "location=" + (form.location.status?1:0) + ",";
+	winFmt += "scrollbars=" + (form.scrollbars.status?1:0) + ",";
+	winFmt += "resizable=" + (form.resizable.status?1:0) + ",";
+	winFmt += "status=" + (form.status.status?1:0);
+	
+	status = "Control string = " + winFmt;
+	window.open(form.url.value, form.title.value, winFmt);
+}
+</script>
+
+<form>
+Window url: <input size=30 id=url value="http://www.cs.nthu.edu.tw"><br>
+Window name: <input size=30 id=title value="newWin"><br>
+Window width: <input size=30 id=width value=400><br>
+Window height: <input size=30 id=height value=300><br>
+X: <input size=30 id=left value=100><br>
+Y: <input size=30 id=top value=100><br>
+<input type=checkbox id=titlebar> Show titlebar <br>
+<input type=checkbox id=menubar> Show menubar <br>
+<input type=checkbox id=toolbar> Show tolbar <br>
+<input type=checkbox id=location> show url bar <br>
+<input type=checkbox id=scrollbars> Show scrollbar <br>
+<input type=checkbox id=resizable> Resizable <br>
+<input type=checkbox id=status> Show status bar <br>
+<input type=button value="Open new window" onClick="openWindow(this.form)">
+<input type=reset>
+</form>
+
+<p>
+
+
+
+<hr>
+
+</body>
+</html>
