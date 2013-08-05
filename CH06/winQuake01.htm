@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show winQuake 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function shakeWindow(x)
+{
+	for (var i = 0; i < 1000; i++)
+	{
+		window.moveBy(0, x)
+		window.moveBy(x, 0)
+		window.moveBy(0, -x)
+		window.moveBy(-x, 0)
+	}
+}
+</script>
+
+<form>
+<input type="button" onClick="shakeWindow(5)" value="Small Earthquake">
+<input type="button" onClick="shakeWindow(50)" value="Big Earthquake">
+</form>
+
+<hr>
+
+</body>
+</html>
