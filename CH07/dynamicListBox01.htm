@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dynamicListBox 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function deleteOption(list)
+{
+	var index = list.selectedIndex;
+	if (index >= 0)
+	{
+		list.options[index] = null;
+	} else {
+		alert("No selected option!");
+	}
+}
+
+function addOption(list, text, value)
+{
+	var index = list.options.length;
+	list.options[index] = new Option(text, value);
+	list.selectedIndex = index;
+}
+</script>
+
+<form>
+<select id=theList size=5>
+	<option value=Monday>Monday
+	<option value=Wednesday>Wednesday
+	<option value=Friday>Friday
+	<option value=Sunday>Sunday
+</select>
+<br>
+<p>
+<input type="button" value="Delete selected option" onClick="deleteOption(theList)"><br>
+<input type="button" value="Add the option right side" onClick="addOption(theList, theText.value, theValue.value)">
+Text: <input id=theText value="test">
+Value: <input id=theValue value="test">
+</form>
+
+
+<hr>
+
+</body>
+</html>

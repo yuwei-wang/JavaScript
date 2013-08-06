@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show formProp 01</h2>
+<hr>
+
+
+<form name=formName id=formId method=post action=formact.asp target=_blank>
+	Your name: <input type=text name=UserName value="Test Input">
+	<input type=submit> <input type=reset>
+</form>
+<hr>
+
+<script src="listProp.js"></script>
+
+Using listProp(formId, "formId") to list all the properties of the form.
+<p><h3>"document.formName" properties list:</h3>
+<p><script>listProp(formId, "formId")</script>
+
+
+<script language="JavaScript">
+
+</script>
+
+
+
+<hr>
+
+</body>
+</html>
