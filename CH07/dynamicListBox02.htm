@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show dynamicListBox 02</h2>
+<hr>
+
+
+<script language="JavaScript">
+department = new Array();
+department[0] = ["Molly", "Bessie", "Nigel", "Evan", "Lianne"];	//CS department
+department[1] = ["Kirsten", "Ottiwell", "Nora", "Joey", "Darleen"];	//EE department
+department[2] = ["Reynold", "Elfriede", "Mallory", "Jethro"];	//PME department
+department[3] = ["James", "Charles", "Jenson"];	//IE department
+
+function renew(index)
+{
+	for (var i = 0; i < department[index].length; i++)
+	{
+		document.myForm.member.options[i] = new Option(department[index][i], department[index][i]);
+	}
+	
+	document.myForm.member.length = department[index].length;
+}
+</script>
+
+<form name="myForm">
+Department:
+<select size=5 onChange="renew(this.selectedIndex);">
+	<option value="CS department">CS department
+	<option value="EE department">EE department
+	<option value="PME department">PME department
+	<option value="IE department">IE department
+</select>
+
+Member:
+<select name="member" size=5>
+	<option value="Please select from the left side.">
+</select>
+</form>
+
+<hr>
+
+</body>
+</html>
