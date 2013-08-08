@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show formValidation 03</h2>
+<hr>
+
+
+
+
+<script language="JavaScript">
+function checkName(control)
+{
+	if (control.value == "")
+	{
+		validatePrompt(control, "Please input your name!");
+		return (false);
+	}
+	return(true);
+}
+
+function checkPassword(control)
+{
+	if (control.value.length != 5)
+	{
+		validatePrompt(control, "Password length should be 5!");
+		return(false);
+	}
+	return(true);
+}
+
+function checkGender(control)
+{
+	for (var i =0; i < control.length; i++)
+	{
+		if (control[i].status)
+		{
+			return(true);
+		}
+	}
+	alert("Please select the gender!");
+	return (false);
+}
+
+function checkNationality(control)
+{
+	for (var i = 1; i < control.length; i++)
+	{
+		if (control[i].selected)
+		{
+			return(true);
+		}
+	}
+	alert("Please select your nationality!");
+	return(false);
+}
+
+function checkHobbies(control)
+{
+	var count = 0;
+	for (var i = 1; i < control.length; i++)
+	{
+		if (control[i].selected)
+		{
+			count++;
+		}
+	}
+	if (count >= 2)
+	{
+		return(true);
+	}
+	alert("Please select as least 2 hobbies!");
+	return(false);
+}
+
+function checkComment(control)
+{
+	if (control.value == "")
+	{
+		validatePrompt(control, "Please enter your comment!")
+		return(false);
+	}
+	return(true);
+}
+
+function validateForm(form)
+{
+	if (!checkName(form.realname)) return;
+	if (!checkPassword(form.password)) return;
+	if (!checkGender(form.gender)) return;
+	if (!checkNationality(form.nationality)) return;
+	if (!checkHobbies(form.hobbies)) return;
+	if (!checkComment(form.comments)) return;
+	alert("All data validated!\nThe form will submit!");
+	document.testform.submit();
+}
+
+function validatePrompt(control, promptStr)
+{
+	alert(promptStr);
+	control.focus();
+	return;
+}
+</script>
+
+<form name=testform>
+<p>Name: <input type="text" name="realname" value="xxx">
+<p>Password: <input type="password" name="password">
+<p>Gender: <input type="radio" name="gender" value="male"> male
+<input type="radio" name="gender" value="female"> female
+<p>Nationality: <select name="nationality">
+	<option>----
+	<option>Taiwan
+	<option>Japan
+	<option>Korea
+</select>
+<p>Hobbies: <select multiple name="hobbies">
+	<option>Ball
+	<option>Music
+	<option>Reading
+	<option>Internet
+</select>
+<p>Comment: <textarea name=comments cols=40 rows=3></textarea>
+<p><input type="button" value="Submit" onClick="validateForm(this.form)">
+<input type="reset">
+</form>
+
+
+<hr>
+
+</body>
+</html>
