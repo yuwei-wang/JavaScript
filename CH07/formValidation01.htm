@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show formValidation 01</h2>
+<hr>
+
+
+
+
+<script language="JavaScript">
+function validateForm(form)
+{
+	if (!checkEmail(form.email.value))
+	{
+		alert("Email is not correct, the form will not send!");
+		return(false);
+	}
+	alert("Data correct, send the form right now!");
+	return(true);
+	form.submit();
+	return(true);
+}
+
+function checkEmail(email)
+{
+	index = email.indexOf('@', 0);
+	if (email.length == 0)
+	{
+		alert("Please enter Email address!");
+		return(false);
+	} else if (index == -1) {
+		alert("Error, it should include '@'!");
+		return(false);
+	} else if (index == 0) {
+		alert("Error, it can' be empty before '@'!");
+		return(false);
+	} else if(index == (email.length - 1)) {
+		alert("Error, it can' be empty after '@'!");
+		return(false);
+	} else {
+		return(true);
+	}
+}
+</script>
+
+Please enter your Email: <p>
+<form name=form>
+Email:
+<input type="text" name=email size=20 value="xxxx"><br>
+<p><input type=button value="Check" onClick="validateForm(this.form)">
+</form>
+
+<hr>
+
+</body>
+</html>

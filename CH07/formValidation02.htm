@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show formValidation 02</h2>
+<hr>
+
+
+
+
+<script language="JavaScript">
+function validateForm(form)
+{
+	if (checkCreditCardNumber(form.cardNumber))
+	{
+		alert("Data is correct, send the form right now!");
+		form.submit();
+		return(true);
+	}
+	alert("Data is not correct, the form will not send!");
+	form.cardNumber.focus();
+	return(false);
+}
+
+function checkCreditCardNumber(control)
+{
+	var number = control.value;
+	var character;
+	var digit;
+	//alert(number.length);
+	if (number.length != 19)
+	{
+		alert("<" + number + "> (" + number.length +") : The length of card number is not correct, please check it!");
+		return(false);
+	}
+	for (i = 0; i < 19; i++)
+	{
+		character = number.charAt(i);
+		if ( (i == 4) || (i == 9) || (i == 14))
+		{
+			if (character != "-")
+			{
+				alert("<" + number + ">: The length of card number is not correct, please use '-' to separate every four number.");
+				return(false);
+			}
+		} else {
+			if (isNaN(parseInt(character)))
+			{
+				alert("<" + number + ">: The card number is not correct, please check it!");
+				return(false);
+			}
+		}
+	}
+	return(true);
+}
+</script>
+
+Please input your credit card number:<p>
+<form>
+card number:
+<input type="text" name=cardNumber size=20 value="xxxx-xxxx-xxxx-xxxx"><br>
+<p><input type=button value="Check" onClick="validateForm(this.form)">
+</form>
+
+
+<hr>
+
+</body>
+</html>
