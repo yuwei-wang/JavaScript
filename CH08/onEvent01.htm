@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show onEvent 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function onLoadFcn()
+{
+	alert("onLoad event!!");
+}
+
+function onUnloadFcn()
+{
+	alert("onUnload event!!");
+}
+
+function listsrc(obj)
+{
+	alert(obj.outerHTML);
+}
+
+function listprop(obj)
+{
+	window3 = window.open('', 'messageWindow', 'scrollbars=yes, resize=yes, width=300, height=300');
+	str = "";
+	for (var i in obj)
+	{
+		if (i.indexOf("on" == 0))
+		{
+			str = str + "obj." + i + " = " + obj[i] + "<br>\n";
+		}
+	}
+	window3.document.writeln(str);
+}
+
+window.onload = onLoadFcn;
+window.onunload = onUnloadFcn;
+</script>
+
+
+
+
+
+<hr>
+
+</body>
+</html>
