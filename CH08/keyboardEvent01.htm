@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body onLoad="alert(string1)" onUnload="alert(string2)">
+<h2 align=center>Using JavaScript to show keyboardEvent 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function keyFunction()
+{
+	alert("Key code = " + event.keyCode);
+	if (event.keyCode == 27)
+	{
+		alert("The function of 'Esc' has been calceled!");
+		return false;
+	} else if (event.keyCode == 8) {
+		alert("The function of 'Backspace' has been cancled!");
+		return false;
+	} else if (event.keyCode == 9) {
+		alert("The function of 'Tab' has been canceled!");
+		return false;
+	} else if (event.keyCode == 71) {
+		document.location="http://www.google.com";
+	}
+}
+document.onkeydown = keyFunction;
+</script>
+
+Please press any key to show the keyCode! Attention, the functions of the key below have been canceled:
+
+<ul>
+<li>Esc
+<li>Tab
+<li>Backspace
+</ul>
+
+By the way, "g" has a special function.
+
+<hr>
+
+</body>
+</html>
