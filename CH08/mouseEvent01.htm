@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show mouseEvent 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function showMouseButton()
+{
+	switch (event.button)
+	{
+		case 1:
+			alert("Mouse left click!");
+			break;
+		case 2:
+			alert("Mouse right click!");
+			break;
+		case 3:
+			alert("Mouse middle click!");
+			break;
+		default:
+			alert("Unknown key click!");
+			break;
+	}
+}
+</script>
+
+<div onMouseDown="showMouseButton()">Mouse click here!</div>
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body onLoad="alert(string1)" onUnload="alert(string2)">
+<h2 align=center>Using JavaScript to show keyboardEvent 02</h2>
+<hr>
+
+
+<script language="JavaScript">
+// Shift keycode:16, Ctrl keyCode:17, Alt keyCode: 18, Alt keyCode: 18
+function keyFunction()
+{
+	if ( (event.shiftKey) && (event.keyCode != 16) )
+	{
+		alert("Shift + " + event.keyCode);
+	}
+	if ( (event.ctrlKey) && (event.keyCode != 17) )
+	{
+		alert("Ctrl + " + event.keyCode);
+	}
+	if ( (event.altKey) && (event.keyCode != 18) )
+	{
+		alert("Alt + " + event.keyCode);
+	}
+}
+
+document.onkeydown = keyFunction;
+</script>
+
+Press any combination keys (press 'shift' or 'alt' or 'ctrl' first and then press another key) to show the keyCode.
+
+
+<hr>
+
+</body>
+</html>

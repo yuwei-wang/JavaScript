@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body onkeydown="move()">
+<h2 align=center>Using JavaScript to show squareMover 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function move()
+{
+	ek = event.keyCode;
+	if (ek == 37) myArea.style.posLeft -= 5;
+	if (ek == 39) myArea.style.posLeft += 5;
+	if (ek == 38) myArea.style.posTop -= 5;
+	if (ek == 40) myArea.style.posTop += 5;
+}
+</script>
+
+<div id=myArea style="position:absolute; top:20; left:20; height:50; width:50; background-color:#00FF00"></div>
+
+Press arrow keys to move the green square.
+
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show disableRightButton 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function mouseDown()
+{
+	if (event.button != 1)
+	{
+		alert("Mouse right click disabled");
+		return false;
+	}
+}
+
+document.onmousedown = mouseDown;
+</script>
+
+<img src="image\1.jpg" border=1 align=right>
+
+Please click the right button on the picture.
+
+<hr>
+
+</body>
+</html>

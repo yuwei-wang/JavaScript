@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show keyboardEvent 03</h2>
+<hr>
+
+
+<script language="JavaScript">
+function encrypt()
+{
+	event.keyCode -= 1;
+}
+
+function check()
+{
+	if (testField.value == "I am a pig")
+	{
+		alert("Bingo!");
+	}
+}
+</script>
+
+Please input: J!bn!b!qjh
+<p>
+<input id=testField onKeyPress="encrypt()" onKeyUp="check()">
+
+
+
+<hr>
+
+</body>
+</html>
