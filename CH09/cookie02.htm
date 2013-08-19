@@ -12,6 +12,19 @@
 </script>
 
 
+<script src="cookieUtility.js"></script>
+<form>
+Please set cookie name-value pair:<br>
+Name: <input id=cookieName><br>
+Value: <input id=cookieValue><br>
+<input type=button value="write cookie" onClick="document.cookie=escape(cookieName.value) + '=' + escape(cookieValue.value); history.go(0)">
+<p>Attention: These cookies only stored in the memory, they will disappear after closing browser or session time out.
+</form>
+
+<hr>
+
+<h3 align=center>Cookie list of this page</h3>
+<script>listCookie();</script>
 
 <hr>
 

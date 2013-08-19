@@ -9,7 +9,7 @@ function setCookie(name, value)
 	var secure = (argc > 5) ? argv[5] : null;
 	
 	document.cookie = escape(name) + "=" + escape(value) +
-		((expires == null) ? "" : ("; expire=" + expires.toGMTString())) +
+		((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
 		((path == null) ? "" : ("; path=" + path)) +
 		((domain == null) ? "" : ("; domain=" + domain)) +
 		((secure == null) ? "" : ("; secure=" + secure));
@@ -19,7 +19,7 @@ function setCookie(name, value)
 function delCookie(name)
 {
 	var expDate = new Date();
-	eexpDate.setTime(expDate.getTime() - 1); //set cookie expire date early then current time
+	expDate.setTime(expDate.getTime() - 1); //set cookie expire date early then current time
 	document.cookie = escape(name) + "=; expires=" + expDate.toGMTString();
 }
 
@@ -52,5 +52,28 @@ function showAllCookie()
 
 function getCookieValueByIndex(startIndex)
 {
-	
+	var endIndex = document.cookie.indexOf(";", startIndex);
+	if (endIndex == -1)
+	{
+		endIndex = document.cookie.length;
+	}
+	return unescape(document.cookie.substring(startIndex, endIndex));
+}
+
+// List all name/value pairs in a table
+function listCookie()
+{
+	document.writeln("<p><b>Original cookie string:<p></b><center><font color=green>" + document.cookie + "</font></center>");
+	document.writeln("<p><b>Extracted name/value:</b>");
+	document.writeln("<table border=1 align=center>");
+	document.writeln("<tr><th>Name<th>Value");
+	cookieArray = document.cookie.split(";");
+	for (var i = 0; i < cookieArray.length; i++)
+	{
+		thisCookie = cookieArray[i].split("=");
+		cookieName = unescape(thisCookie[0]);
+		cookieValue = unescape(thisCookie[1]);
+		document.writeln("<tr><td><font color=red>" + cookieName + "</font><td><font color=green>" + cookieValue + "</font>");
+	}
+	document.writeln("</table>");
 }
