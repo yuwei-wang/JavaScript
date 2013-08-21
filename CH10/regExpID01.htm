@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpID 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function checkID(string)
+{
+	re = /^[A-Z]\d{9}$/;
+	if (re.test(string))
+	{
+		alert("Success! Compliant 'RE' format");
+	} else {
+		alert("Fail! Not compliant 'RE' format");
+	}
+}
+</script>
+
+ID number (first character should be upper case): <input id=idNumber value=A12345678>
+<input type=button value=Validate onClick="checkID(idNumber.value)">
+
+<hr>
+
+</body>
+</html>

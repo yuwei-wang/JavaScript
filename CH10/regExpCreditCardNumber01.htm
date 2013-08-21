@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpCreditCardNumber 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function checkCreditCard(string)
+{
+	re = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+	if (re.test(string))
+	{
+		alert("Success! Compliant 'RE' format");
+	} else {
+		alert("Fail! Not compliant 'RE' format");
+	}
+}
+</script>
+
+CreditCard number: <input id=creditCardNumber value=1234-5678-9012-3456>
+<input type=button value=Validate onClick="checkCreditCard(creditCardNumber.value)">
+
+<hr>
+
+</body>
+</html>

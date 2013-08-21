@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpEnglishName 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function checkEnglishName(string)
+{
+	re1 = /^[A-Za-z\-]+\s+[A-Za-z\-]+$/;
+	re2 =/^[A-Za-z\-]+\s+[A-Za-z\-]+\s+[A-Za-z\-]+$/;;
+	if (re1.test(string) || re2.test(string))
+	{
+		alert("Success! Compliant 're1' or 're2' format");
+	} else {
+		alert("Fail! Not compliant 're1' or 're2' format");
+	}
+} 
+</script>
+
+Your english name (format: First Last or Ffirst Middle Last): <input id=englishName value="Jyh-Shing Roger Jang">
+<input type=button value="Validate" onClick="checkEnglishName(englishName.value)">
+
+<hr>
+
+</body>
+</html>
