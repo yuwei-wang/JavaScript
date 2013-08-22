@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpGreedy 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+str = "fred batbetbitbotbut barney";
+document.write("str = " + str + "<br>");
+document.write("Greedy Match: <br>");
+re = /b.*t/;
+document.write("re = " + re + "<br>");
+document.write("str.match(re) = " + str.match(re) + "<br>");
+document.write("Minimum Match: <br>");
+re = /b.*?t/;
+document.write("re = " + re + "<br>");
+document.write("str.match(re) = " + str.match(re) + "<br>");
+</script>
+
+
+
+<hr>
+
+</body>
+</html>
