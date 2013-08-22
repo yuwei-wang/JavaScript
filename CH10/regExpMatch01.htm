@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpMatch 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function regExpMatch(string, pattern, flag)
+{
+	var regexp = new RegExp(pattern, flag);
+	//var index = string.search(regexp);
+	var matched = string.match(regexp);
+	alert(matched);
+}
+</script>
+
+<center>
+String: <input size=40 id=strID value="阿輝伯是李登輝, 李炳輝是金門王的搭檔"><br>
+Regular Expression: <input size=40 id=patID value="李.輝"><br>
+Flag: <input size=40 id=flagID value="g"><br>
+<input type=button value="Search result" onClick="regExpMatch(strID.value, patID.value, flagID.value)">
+</center>
+
+
+<hr>
+
+</body>
+</html>

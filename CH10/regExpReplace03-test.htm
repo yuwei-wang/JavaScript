@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpReplace-test 03</h2>
+<hr>
+
+
+<script language="JavaScript">
+function checkEnglishName(xxx)
+{
+	var str = xxx.value;
+	str = str.replace(/^[\s]+/g, "");
+	str = str.replace(/[\s]+$/g, "");
+	str = str.replace(/[\s]+/g, " ");
+	xxx.value = str;
+}
+</script>
+
+English name: <input id=englishName value="         Michael          Jordan">
+<input type=button value="Fix it" onClick="checkEnglishName(englishName)">
+
+
+<hr>
+
+</body>
+</html>

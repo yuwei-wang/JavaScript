@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpTest 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+function showMatched(form)
+{
+	var regexp = new RegExp(form.pattern.value, form.flag.value);
+	var str = form.string.value;
+	var matched = str.match(regexp);
+	if (matched)
+	{
+		var dispstr = matched.length + " matched string:";
+		for (var i = 0; i < matched.length; i++)
+		{
+			dispstr = dispstr + "\n" + matched[i];
+		}
+		alert(dispstr);
+	} else {
+		alert("No matched string!");
+	}
+}
+</script>
+
+<form>
+<table align=center>
+<tr><td align=right>String:
+<td><input type=text size=30 name=string value="There are 10 rookies coming at 3 o'clock!">
+<tr><td align=right>Regular Expressions:
+<td><input type=text size=30 name=pattern value=" \w+ "> (example:\d{2,3}, T.*a, T.*?a)
+<tr><td align=right>flag:
+<td><input type=text size=30 name=flag value="g"> (g, i, or gi)
+<tr><td align=right><br>
+<td><input type=button value="Show matched string" onClick="showMatched(this.form)"><input type=reset>
+</table>
+</form>
+
+
+<hr>
+
+</body>
+</html>

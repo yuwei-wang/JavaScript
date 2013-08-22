@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show cookie 04</h2>
+<hr>
+
+
+<script language="JavaScript">
+
+</script>
+
+<script src="cookieUtility.js"></script>
+
+<script>
+duration = 365; // keeps on year
+today = new Date();
+expireDate = new Date();
+expireDate.setTime(today.getTime() + 1000 * 60 * 60 * 24 * duration); // set up expire day
+cookieName = 'VisitCount';
+count = getCookie(cookieName);
+
+if (count == null)
+{
+	count = 0;
+}
+count++;
+if (count == 1) {
+	message = "Welcome to this page first time!";
+} else if (count == 2){
+	message = "Welcome again!";
+} else {
+	message = "You have visited this page " + count + "times!";
+}
+
+setCookie(cookieName, count, expireDate);
+document.write(message);
+document.write("The cookie you leaved here: " + cookieName + ", will be keep " + duration + " day(s)");
+</script>
+
+<p>Click <input type=button value="Reset" onClick="delCookie('VisitCount'); history.go(0)"> to reset the counter. <br>
+click <input type=button value="Reload" onClick="history.go(0)"> to increase the counter.
+
+<hr>
+
+<h3 align=cneter>Cookie list of this page</h3>
+<script>listCookie();</script>
+
+
+<hr>
+
+</body>
+</html>

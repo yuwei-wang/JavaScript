@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpEmail 02</h2>
+<hr>
+
+
+<script language="JavaScript">
+function checkEmail(string)
+{
+	//re = /^.+@.+\..{2,3}$/;
+	re = /^[^\s]+@[^\s]+\.[^\s]{2,3}$/;
+	if (re.test(string))
+	{
+		alert("Success! Compliant 'RE' format");
+	} else {
+		alert("Fail! Not compliant 'RE' format");
+	}
+}
+</script>
+
+Email: <input id=email value="jang@cs.n thu.edu.tw">
+<input type=button value="Validate" onClick="checkEmail(email.value)">
+
+<hr>
+
+</body>
+</html>

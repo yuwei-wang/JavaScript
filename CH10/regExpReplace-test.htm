@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show regExpReplace test</h2>
+<hr>
+
+
+<script language="JavaScript">
+function regExpReplace(strId, pat1id, pat2id, flagId)
+{
+	var regexp = new RegExp(pat1id, flagId);
+	var str = strId;
+	var newString = str.replace(regexp, pat2id);
+	alert(newString);
+}
+</script>
+
+<center>
+String: <input size=40 id=strId value="我愛通用式, 通用式功能強大"><br>
+Regular Expression: <input size=40 id=pat1id value="通.式"><br>
+New string: <input size=40 id=pat2id value="正規式"><br>
+Flag: <input size=40 id=flagId value=""><br>
+<input type=button value="Show replace result" onClick="regExpReplace(strId.value, pat1id.value, pat2id.value, flagId.value)">
+</center>
+
+<hr>
+
+</body>
+</html>
