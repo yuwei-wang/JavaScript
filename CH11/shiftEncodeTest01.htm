@@ -12,6 +12,19 @@
 </script>
 
 
+<script src=encode.js></script>
+<p>Original string: <textarea rows=3 cols=60 id=text1>
+function square(x)
+{
+	return(x * x);
+}
+</textarea><br>
+Offset: <input type=text id=keyStr value="1">
+<p><input type=button value="Use shiftEncode() & escape() to encode" onClick="text2.value=escape(shiftEncode(text1.value, parseInt(keyStr.value)))">
+<br>String after encoding:<textarea rows=3 cols=60 id=text2></textarea>
+<p><input type=button value="Use unescape() & shiftEncode() to decode" onClick="text3.value=shiftEncode(unescape(text2.value), -parseInt(keyStr.value))">
+<br>String after decoding:<textarea rows=3 cols=60 id=text3></textarea>
+
 
 <hr>
 
