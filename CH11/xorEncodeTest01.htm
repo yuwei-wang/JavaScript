@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show xorEncodeTest 01</h2>
+<hr>
+
+
+<script language="JavaScript">
+
+</script>
+
+<script src=encode.js></script>
+<p>Original string:<textarea rows=3 cols=60 id=text1>
+function square(x)
+{
+	return(x * x);
+}
+</textarea><br>
+key string: <input type=text id=keyStr value="encode and decode">
+<p><input type=button value="Use xorEncode() and escape() to encode" onClick="text2.value=escape(xorEncode(text1.value, keyStr.value))">
+<br>String after decode:<textarea rows=3 cols=60 id=text2></textarea>
+<p><input type=button value="Use unescape() and xorEncode() to decode" onClick="text3.value=xorEncode(unescape(text2.value), keyStr.value)">
+<br>String after decode:<textarea rows=3 cols=60 id=text3></textarea>
+
+
+
+<hr>
+
+</body>
+</html>
