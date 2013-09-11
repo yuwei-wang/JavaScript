@@ -5,10 +5,12 @@
 <!--#include file="head.inc"-->
 <hr>
 
-Four methods to print "Hello World!" in server-site VBScript!
+Four methods to print "Hello World!" in server-site VBScript:
 <p>
-<%Response.Write("Hello World!")%>
-
+<%Response.Write("Hello World!")%><br>
+<% = "Hello World!" %><br>
+<%x = "Hello World!" %><%Response.Write(x)%><br>
+<%x = "Hello World!"%><% = x %><br>
 <hr>
 
 <!--#include file="foot.inc"-->
