@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+<body>
+<h2 align=center>Using JavaScript to show scopeOfVariable 02 (wyw test)</h2>
+<hr>
+
+<script language="JavaScript">
+function testScope()
+{
+	var x = 5, z = 5; //local variable
+	y = 5; //global variable
+	document.write("Inside function:<br>");
+	document.write("x = " + x + "<br>");
+	document.write("y = " + y + "<br>");
+	document.write("z = " + z + "<br>");
+}
+</script>
+
+<script>
+x = 10; //global variable
+y = 10; //global variable
+z = 10; //global variable
+document.write("Before invoking function:<br>");
+document.write("x = " + x + "<br>");
+document.write("y = " + y + "<br>");
+document.write("z = " + z + "<br>");
+testScope();
+document.write("After invoking function:<br>");
+document.write("x = " + x + "<br>");
+document.write("y = " + y + "<br>");
+document.write("z = " + z + "<br>");
+</script>
+
+<hr>
+
+</body>
+</html>
