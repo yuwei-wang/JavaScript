@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title><%=title%></title>
-	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 	<style>
 	
 	</style>
